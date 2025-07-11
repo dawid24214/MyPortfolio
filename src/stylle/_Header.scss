@@ -1,0 +1,74 @@
+body {
+  background-color: #1f2937; // Tailwind's gray-900
+  color: #e5e7eb; // Tailwind's gray-200
+  font-family: sans-serif;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  background-color: rgba(17, 24, 39, 0.9); // gray-900/90
+  backdrop-filter: blur(4px);
+  z-index: 50;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+
+  &__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 1.5rem;
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #60a5fa; // blue-400
+    transition: color 0.3s;
+
+    &:hover {
+      color: #93c5fd; // blue-300
+    }
+  }
+
+  &__logo-white {
+    color: white;
+  }
+
+  &__menu-button {
+    display: none;
+    color: #60a5fa;
+
+    @media (max-width: 768px) {
+      display: block;
+      background: none;
+      border: none;
+    }
+  }
+
+  &__menu-icon {
+    font-size: 1.5rem;
+  }
+
+  &__nav {
+    display: flex;
+    gap: 2rem;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
+  }
+}
+
+.nav-link {
+  color: white;
+  transition: color 0.3s;
+
+  &:hover {
+    color: #60a5fa;
+  }
+}

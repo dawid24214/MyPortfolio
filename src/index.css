@@ -8,8 +8,3 @@
 html {
     scroll-behavior: smooth;
 }
-
-.page-section {
-    padding: 100px 20px;
-    min-height: 100vh;
-}

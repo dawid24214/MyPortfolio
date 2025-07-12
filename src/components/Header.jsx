@@ -16,7 +16,7 @@ const Header = () => {
             <div className="header__container">
                 <div className="header__content">
                     <a href="#home" className="header__logo" onClick={closeMenu}>
-                        <span className="header__logo-white">Dev</span>Freelancer
+                        <span className="header__logo-white">Dawid</span>Grochowski
                     </a>
 
                     <button

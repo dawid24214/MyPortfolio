@@ -7,6 +7,7 @@ import AboutSection from "./components/AboutSection.jsx";
 import ServicesSection from "./components/ServicesSection.jsx";
 import ProjectsSection from "./components/ProjectsSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
+import Footer from "./components/Footer.jsx";
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
                     <ServicesSection/>
                     <ProjectsSection/>
                     <ContactSection/>
+                    <Footer/>
 
                 </main>
             </Router>

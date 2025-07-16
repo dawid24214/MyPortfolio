@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from 'react';
-import '../stylle/herosection.scss'
+import '../stylle/_herosection.scss'
 
 
 const HeroSection = () => {

@@ -1,0 +1,122 @@
+.about-section {
+  padding: 5rem 1.5rem;
+  background-color: rgba(31, 41, 55, 0.5); /* Tailwind's bg-gray-800/50 */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 4rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+.highlight {
+  color: #60a5fa;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.profile-photo {
+  position: relative;
+  width: 16rem;
+  height: 16rem;
+  flex-shrink: 0;
+}
+
+.photo-glow {
+  position: absolute;
+  inset: -1rem;
+  background-color: rgba(96, 165, 250, 0.2);
+  border-radius: 9999px;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.photo-img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 9999px;
+  border: 4px solid rgba(96, 165, 250, 0.3);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.intro {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  color: #9ca3af;
+  margin-bottom: 1.5rem;
+  line-height: 1.7;
+}
+
+.tech {
+  color: black;
+  font-weight: bold;
+}
+
+.tech-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tech-item {
+  display: flex;
+  align-items: center;
+  background-color: rgba(55, 65, 81, 0.5);
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  color: white;
+}
+
+.icon {
+  color: #60a5fa;
+  margin-right: 0.5rem;
+}
+
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

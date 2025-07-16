@@ -6,6 +6,7 @@ import HeroSection from "./components/HeroSection.jsx"
 import AboutSection from "./components/AboutSection.jsx";
 import ServicesSection from "./components/ServicesSection.jsx";
 import ProjectsSection from "./components/ProjectsSection.jsx";
+import ContactSection from "./components/ContactSection.jsx";
 
 
 function App() {
@@ -18,6 +19,7 @@ function App() {
                     <AboutSection/>
                     <ServicesSection/>
                     <ProjectsSection/>
+                    <ContactSection/>
 
                 </main>
             </Router>

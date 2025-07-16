@@ -4,6 +4,7 @@ import Header from "./components/Header.jsx";
 import {Route, Router, Routes} from "react-router-dom";
 import HeroSection from "./components/HeroSection.jsx"
 import AboutSection from "./components/AboutSection.jsx";
+import ServicesSection from "./components/ServicesSection.jsx";
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
                 <main>
                     <HeroSection/>
                     <AboutSection/>
+                    <ServicesSection/>
                 </main>
             </Router>
 

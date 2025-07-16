@@ -5,6 +5,7 @@ import {Route, Router, Routes} from "react-router-dom";
 import HeroSection from "./components/HeroSection.jsx"
 import AboutSection from "./components/AboutSection.jsx";
 import ServicesSection from "./components/ServicesSection.jsx";
+import ProjectsSection from "./components/ProjectsSection.jsx";
 
 
 function App() {
@@ -16,6 +17,8 @@ function App() {
                     <HeroSection/>
                     <AboutSection/>
                     <ServicesSection/>
+                    <ProjectsSection/>
+
                 </main>
             </Router>
 

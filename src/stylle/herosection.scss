@@ -1,0 +1,131 @@
+.hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: 5rem;
+}
+
+/*.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 5rem 1.5rem;
+}*/
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content-wrapper {
+    flex-direction: row;
+  }
+}
+
+.left-column {
+  flex: 1;
+  margin-bottom: 2.5rem;
+}
+
+.left-column h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .left-column h1 {
+    font-size: 3.75rem;
+  }
+}
+
+.highlight {
+  color: #60a5fa;
+}
+
+.left-column p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-bottom: 2rem;
+}
+
+.button-group {
+  display: flex;
+  gap: 1rem;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  transform: scale(1);
+}
+
+.btn-primary:hover {
+  background-color: #1d4ed8;
+  transform: scale(1.05);
+}
+
+.btn-outline {
+  border: 1px solid #60a5fa;
+  color: #60a5fa;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  transform: scale(1);
+}
+
+.btn-outline:hover {
+  background-color: rgba(96, 165, 250, 0.1);
+  transform: scale(1.05);
+}
+
+.right-column {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  position: relative;
+  max-width: 400px;
+  width: 100%;
+}
+
+.image-blur-bg {
+  position: absolute;
+  inset: -1rem;
+  background-color: rgba(96, 165, 250, 0.2);
+  border-radius: 1rem;
+  filter: blur(20px);
+  z-index: 0;
+}
+
+.main-image {
+  position: relative;
+  width: 100%;
+  border-radius: 1rem;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.3);
+  border: 2px solid rgba(96, 165, 250, 0.3);
+  z-index: 1;
+}
+
+/* Fade-in animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

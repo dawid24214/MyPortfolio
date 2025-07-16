@@ -3,39 +3,42 @@ import '../stylle/_Header.scss';
 const Header = () => {
     const [menuOpen, setMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
-        setMenuOpen(!menuOpen);
-    };
-
-    const closeMenu = () => {
-        setMenuOpen(false);
+    const toggleMobileMenu = () => {
+        setMenuOpen(prev => !prev);
     };
 
     return (
         <header className="header">
-            <div className="header__container">
-                <div className="header__content">
-                    <a href="#home" className="header__logo" onClick={closeMenu}>
-                        <span className="header__logo-white">Dawid</span>Grochowski
+            <div className="container">
+                <div className="nav-wrapper">
+                    <a href="#" className="brand">
+                        <span className="brand-white">DGrochowski</span>_BudowaStron
                     </a>
 
                     <button
                         id="mobile-menu-button"
-                        className="header__menu-button"
-                        onClick={toggleMenu}
-                        aria-label="Toggle menu"
-                        aria-expanded={menuOpen}
+                        className="menu-button"
+                        onClick={toggleMobileMenu}
                     >
-                        <i className={`fas ${menuOpen ? 'fa-times' : 'fa-bars'} header__menu-icon`}></i>
+                        <i className="fas fa-bars"></i>
                     </button>
 
-                    <nav className={`header__nav ${menuOpen ? 'active' : ''}`}>
-                        <a href="#about" className="nav-link" onClick={closeMenu}>O mnie</a>
-                        <a href="#services" className="nav-link" onClick={closeMenu}>Usługi</a>
-                        <a href="#projects" className="nav-link" onClick={closeMenu}>Projekty</a>
-                        <a href="#contact" className="nav-link" onClick={closeMenu}>Kontakt</a>
+                    <nav className="desktop-menu">
+                        <a href="#about" className="nav-link">O mnie</a>
+                        <a href="#services" className="nav-link">Usługi</a>
+                        <a href="#projects" className="nav-link">Projekty</a>
+                        <a href="#contact" className="nav-link">Kontakt</a>
                     </nav>
                 </div>
+
+                {menuOpen && (
+                    <div id="mobile-menu" className="mobile-menu">
+                        <a href="#about" className="mobile-link">O mnie</a>
+                        <a href="#services" className="mobile-link">Usługi</a>
+                        <a href="#projects" className="mobile-link">Projekty</a>
+                        <a href="#contact" className="mobile-link">Kontakt</a>
+                    </div>
+                )}
             </div>
         </header>
     );

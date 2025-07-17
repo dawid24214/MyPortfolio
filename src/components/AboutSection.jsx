@@ -31,7 +31,7 @@ const AboutSection = () => {
                 <div className="about-content">
                     <div className="profile-photo fade-in" ref={(el) => (fadeRefs.current[1] = el)}>
                         <div className="photo-glow"></div>
-                        <img src="./s.jpg" alt="Zdjęcie profilowe" className="photo-img" />
+                        <img src="/public/g.jpg" alt="Zdjęcie profilowe" className="photo-img" />
                     </div>
 
                     <div className="about-text fade-in" ref={(el) => (fadeRefs.current[2] = el)}>

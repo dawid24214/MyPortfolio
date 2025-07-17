@@ -9,7 +9,6 @@ import ProjectsSection from "./components/ProjectsSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import Footer from "./components/Footer.jsx";
 import BackToTopButton from "./components/BackToTopButton.jsx";
-import {MobileNavContext} from "./components/MobileNavContext.jsx";
 
 
 function App() {

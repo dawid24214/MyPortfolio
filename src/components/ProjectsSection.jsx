@@ -4,10 +4,10 @@ import '../stylle/_projects_section.scss';
 const projects = [
     {
         id: 1,
-        image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1470&q=80',
-        title: 'Projekt 1',
-        description: 'Opis projektu 1',
-        tags: ['HTML', 'CSS', 'JavaScript'],
+        image: '/public/images/projekt1.jpg',
+        title: 'SKLEP Z KURSAMI ONLINE',
+        description: 'Lekka, kobieca i funkcjonalna strona, która umożliwia sprzedaż produktów cyfrowych i wspiera markę osobistą klientki w branży rozwoju osobistego. https://ameliaweb.pl/',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Php' ,'MySQl'],
         delay: '0s',
     },
     {

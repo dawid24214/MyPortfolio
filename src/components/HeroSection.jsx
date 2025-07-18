@@ -1,5 +1,7 @@
 import React, { useEffect, useRef } from 'react';
-import '../stylle/_herosection.scss'
+import '../stylle/_herosection.scss';
+import {Link} from "react-router-dom";
+
 
 
 const HeroSection = () => {
@@ -35,7 +37,8 @@ const HeroSection = () => {
                         </p>
                         <div className="button-group">
                             <a href="#contact" className="btn-primary">Skontaktuj się</a>
-                            <a href="#projects" className="btn-outline">Zobacz projekty</a>
+                            {/*<a href="#projects" className="btn-outline">Zobacz projekty</a>*/}
+                            <Link to='/Test' className='btn-outline'>Zobacz projekty</Link>
                         </div>
                     </div>
                     <div className="right-column fade-in" ref={(el) => (fadeRefs.current[1] = el)}>

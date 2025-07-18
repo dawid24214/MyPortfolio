@@ -9,6 +9,7 @@ import ProjectsSection from "./components/ProjectsSection.jsx";
 import ContactSection from "./components/ContactSection.jsx";
 import Footer from "./components/Footer.jsx";
 import BackToTopButton from "./components/BackToTopButton.jsx";
+import StronaStatyczna from "./components/StronaStatyczna.jsx";
 
 
 function App() {
@@ -41,8 +42,13 @@ function App() {
     }, []);
 
     return (
+
         <Router location='' navigator=''>
+            <Route path='/Test' element={<StronaStatyczna />}/>
             <Header />
+
+
+
             <main>
                 <HeroSection />
                 <AboutSection />
@@ -52,6 +58,9 @@ function App() {
                 <Footer />
             </main>
             <BackToTopButton />
+
+
+
         </Router>
     );
 }

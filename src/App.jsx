@@ -1,55 +1,69 @@
-import { useEffect , useMemo , useState } from "react";
-import SideBar from "./components/Sidebar.jsx";
+import { useEffect, useMemo, useState } from "react";
+
+import Sidebar from "./components/Sidebar.jsx";
 import Hero from "./components/Hero.jsx";
 import About from "./components/About.jsx";
 import Skills from "./components/Skills.jsx";
 import Projects from "./components/Projects.jsx";
 import WhyDev from "./components/WhyDev.jsx";
-import TimeLine from "./components/TimeLine.jsx";
+import Timeline from "./components/Timeline.jsx";
 import Contact from "./components/Contact.jsx";
-import Certification from "./components/Certification.jsx";
+import Certificates from "./components/Certificates.jsx";
 import Footer from "./components/Footer.jsx";
 
 export default function App() {
     const [sidebarHidden, setSidebarHidden] = useState(false);
 
-
+    const isMobileNav = () => window.matchMedia("(max-width: 940px)").matches;
 
     useEffect(() => {
         try {
             const saved = localStorage.getItem("sidebarHidden");
-            // eslint-disable-next-line react-hooks/set-state-in-effect
-            if (saved === "1") setSidebarHidden(true);
+            if (saved === "1" && !isMobileNav()) setSidebarHidden(true);
+        } catch {}
+    }, []);
 
-        } catch {''}
-
+    useEffect(() => {
+        // Na mobile nie pozwalamy trzymać "hidden"
+        if (isMobileNav() && sidebarHidden) setSidebarHidden(false);
     }, [sidebarHidden]);
+
+    useEffect(() => {
+        try {
+            localStorage.setItem("sidebarHidden", sidebarHidden ? "1" : "0");
+        } catch {}
+        document.body.classList.toggle("sidebar-hidden", sidebarHidden);
+    }, [sidebarHidden]);
+
+    const toggleSidebar = () => {
+        if (isMobileNav()) return; // NA MOBILE NIE CHOWAMY
+        setSidebarHidden((v) => !v);
+    };
+
+    const openSidebar = () => {
+        setSidebarHidden(false);
+    };
+
     const year = useMemo(() => new Date().getFullYear(), []);
 
     return (
         <>
-        <div className = 'grid-bg' aria-hidden='true'/>
+            <div className="grid-bg" aria-hidden="true" />
 
-            <SideBar
-            hidden={sidebarHidden}
-            onToggle={() => setSidebarHidden((v) => !v)}
-                onOpen={()=>setSidebarHidden(false)}
-            />
+            <Sidebar hidden={sidebarHidden} onToggle={toggleSidebar} onOpen={openSidebar} />
 
-               <main className={`main ${sidebarHidden ? 'main--hidden': ''}`} id='top'>
-                   <Hero/>
-                   <About/>
-                   <Skills/>
-                   <Projects/>
-                   <WhyDev/>
-                   <TimeLine/>
-                   <Contact/>
-                   <Certification/>
-               </main>
+            <main className={`main ${sidebarHidden ? "sidebar-hidden" : ""}`} id="top">
+                <Hero />
+                <About />
+                <Skills />
+                <Projects />
+                <WhyDev />
+                <Timeline />
+                <Contact />
+                <Certificates />
+            </main>
 
             <Footer year={year} />
-
         </>
     );
-
 }
